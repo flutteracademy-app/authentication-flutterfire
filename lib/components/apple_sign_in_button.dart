@@ -1,4 +1,4 @@
-import 'package:athentication_flutterfire/components/sign_in_button.dart';
+import 'package:authentication_flutterfire/components/sign_in_button.dart';
 import 'package:flutter/material.dart';
 
 class AppleSignInButton extends StatelessWidget {

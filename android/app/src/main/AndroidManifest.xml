@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="flutteracademy.app.athentication_flutterfire">
+    package="app.flutteracademy.authentication_flutterfire">
    <application
-        android:label="athentication_flutterfire"
+        android:label="authentication_flutterfire"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

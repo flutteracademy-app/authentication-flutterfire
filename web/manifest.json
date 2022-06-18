@@ -1,6 +1,6 @@
 {
-    "name": "athentication_flutterfire",
-    "short_name": "athentication_flutterfire",
+    "name": "authentication_flutterfire",
+    "short_name": "authentication_flutterfire",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

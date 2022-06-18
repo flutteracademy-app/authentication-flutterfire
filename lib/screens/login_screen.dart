@@ -1,9 +1,9 @@
 import 'dart:developer';
 
-import 'package:athentication_flutterfire/components/apple_sign_in_button.dart';
-import 'package:athentication_flutterfire/components/email_sign_in_button.dart';
-import 'package:athentication_flutterfire/components/facebook_sign_in_button.dart';
-import 'package:athentication_flutterfire/components/google_sign_in_button.dart';
+import 'package:authentication_flutterfire/components/apple_sign_in_button.dart';
+import 'package:authentication_flutterfire/components/email_sign_in_button.dart';
+import 'package:authentication_flutterfire/components/facebook_sign_in_button.dart';
+import 'package:authentication_flutterfire/components/google_sign_in_button.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
