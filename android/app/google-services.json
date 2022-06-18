@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "469423058215",
+    "project_id": "flutteracademy-dev",
+    "storage_bucket": "flutteracademy-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469423058215:android:39da86e4c38d646ad04d02",
+        "android_client_info": {
+          "package_name": "app.flutteracademy.authentication_flutterfire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469423058215-5uggn3li7b58t882qguatv6fbo966blo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv0F4Ymx09EgYQT3gzG4wADjM972rPByo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469423058215-5uggn3li7b58t882qguatv6fbo966blo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "469423058215-4fms18fscgm82vrs2o0dplbodv9vh4qm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.flutteracademy.athenticationFlutterfire"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
