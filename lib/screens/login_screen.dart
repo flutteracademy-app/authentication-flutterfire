@@ -6,6 +6,7 @@ import 'package:authentication_flutterfire/components/facebook_sign_in_button.da
 import 'package:authentication_flutterfire/components/google_sign_in_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -89,7 +90,24 @@ class LoginScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     child: FacebookSignInButton(
                       darkMode: darkMode,
-                      onPressed: () {},
+                      onPressed: () {
+                        Future<UserCredential> signInWithFacebook() async {
+                          // Trigger the sign-in flow
+                          final LoginResult loginResult =
+                              await FacebookAuth.instance.login();
+
+                          // Create a credential from the access token
+                          final OAuthCredential facebookAuthCredential =
+                              FacebookAuthProvider.credential(
+                                  loginResult.accessToken!.token);
+
+                          // Once signed in, return the UserCredential
+                          return FirebaseAuth.instance
+                              .signInWithCredential(facebookAuthCredential);
+                        }
+
+                        signInWithFacebook();
+                      },
                     ),
                   ),
                   Container(

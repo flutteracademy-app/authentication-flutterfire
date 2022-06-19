@@ -62,7 +62,6 @@ class SignInButton extends StatelessWidget {
               ),
               Expanded(
                 child: Container(
-                    margin: const EdgeInsets.only(right: 10),
                     alignment:
                         centered ? Alignment.center : Alignment.centerLeft,
                     child: Text(
