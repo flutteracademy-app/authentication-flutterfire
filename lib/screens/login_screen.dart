@@ -90,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                     margin: const EdgeInsets.all(8),
                     child: FacebookSignInButton(
                       darkMode: darkMode,
-                      onPressed: () {
+                      onPressed: () async {
                         Future<UserCredential> signInWithFacebook() async {
                           // Trigger the sign-in flow
                           final LoginResult loginResult =
@@ -106,7 +106,21 @@ class LoginScreen extends StatelessWidget {
                               .signInWithCredential(facebookAuthCredential);
                         }
 
-                        signInWithFacebook();
+                        try {
+                          await signInWithFacebook();
+                        } on FirebaseAuthException catch (e) {
+                          print(e.code);
+                          if (e.code ==
+                              'account-exists-with-different-credential') {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                  content: Text(
+                                      "La cuenta ya existe con otro método de inicio de sesión")),
+                            );
+                          }
+                        } catch (e) {
+                          print(e);
+                        }
                       },
                     ),
                   ),

@@ -36,47 +36,47 @@ class SignInButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
       ),
       child: TextButton(
-          style: TextButton.styleFrom(
-            backgroundColor: buttonColor,
-            elevation: 2,
-          ),
-          onPressed: onPressed,
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(1.0),
-                child: Container(
-                  height: 38.0, // 40dp - 2*1dp border
-                  width: 38.0, // matches above
-                  decoration: BoxDecoration(
-                    color: leadingBackground,
-                    borderRadius: BorderRadius.circular(this.borderRadius),
+        style: TextButton.styleFrom(
+          backgroundColor: buttonColor,
+          elevation: 2,
+        ),
+        onPressed: onPressed,
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(1.0),
+              child: Container(
+                height: 38.0, // 40dp - 2*1dp border
+                width: 38.0, // matches above
+                decoration: BoxDecoration(
+                  color: leadingBackground,
+                  borderRadius: BorderRadius.circular(this.borderRadius),
+                ),
+                child: Center(
+                    child: SizedBox(
+                  height: 24,
+                  width: 24,
+                  child: leading,
+                )),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                alignment: centered ? Alignment.center : Alignment.centerLeft,
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontFamily: useAppleFont ? "Apple Button" : "Google Button",
+                    fontWeight: FontWeight.w500,
+                    color: textColor,
                   ),
-                  child: Center(
-                      child: SizedBox(
-                    height: 24,
-                    width: 24,
-                    child: leading,
-                  )),
                 ),
               ),
-              Expanded(
-                child: Container(
-                    alignment:
-                        centered ? Alignment.center : Alignment.centerLeft,
-                    child: Text(
-                      text,
-                      style: TextStyle(
-                        fontSize: 18.0,
-                        fontFamily:
-                            useAppleFont ? "Apple Button" : "Google Button",
-                        fontWeight: FontWeight.w500,
-                        color: textColor,
-                      ),
-                    )),
-              )
-            ],
-          )),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
