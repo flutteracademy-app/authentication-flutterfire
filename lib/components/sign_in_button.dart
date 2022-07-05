@@ -50,7 +50,7 @@ class SignInButton extends StatelessWidget {
                 width: 38.0, // matches above
                 decoration: BoxDecoration(
                   color: leadingBackground,
-                  borderRadius: BorderRadius.circular(this.borderRadius),
+                  borderRadius: BorderRadius.circular(borderRadius),
                 ),
                 child: Center(
                     child: SizedBox(

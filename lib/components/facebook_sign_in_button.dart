@@ -17,7 +17,7 @@ class FacebookSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color buttonColor = Color(0xFF1877F2);
+    Color buttonColor = const Color(0xFF1877F2);
     Widget leading = Image.asset("assets/images/auth_facebook_logo.png");
 
     return SignInButton(
@@ -27,7 +27,7 @@ class FacebookSignInButton extends StatelessWidget {
       leading: leading,
       onPressed: onPressed,
       centered: centered,
-      leadingBackground: Color(0xFF1877F2),
+      leadingBackground: const Color(0xFF1877F2),
     );
   }
 }

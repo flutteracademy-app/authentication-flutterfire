@@ -109,17 +109,17 @@ class LoginScreen extends StatelessWidget {
                         try {
                           await signInWithFacebook();
                         } on FirebaseAuthException catch (e) {
-                          print(e.code);
+                          log(e.code);
                           if (e.code ==
                               'account-exists-with-different-credential') {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                   content: Text(
                                       "La cuenta ya existe con otro método de inicio de sesión")),
                             );
                           }
                         } catch (e) {
-                          print(e);
+                          log('$e');
                         }
                       },
                     ),

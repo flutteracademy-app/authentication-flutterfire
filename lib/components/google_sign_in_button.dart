@@ -6,7 +6,7 @@ class GoogleSignInButton extends StatelessWidget {
   final VoidCallback onPressed;
   final bool centered;
 
-  GoogleSignInButton(
+  const GoogleSignInButton(
       {required this.onPressed,
       this.darkMode = false,
       this.centered = false,
@@ -15,7 +15,7 @@ class GoogleSignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color buttonColor = darkMode ? Color(0xFF4285F4) : Colors.white;
+    Color buttonColor = darkMode ? const Color(0xFF4285F4) : Colors.white;
     Widget leading = Image.asset("assets/images/auth_google_logo.png");
 
     return SignInButton(
